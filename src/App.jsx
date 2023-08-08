@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import {} from 'react'
-import './App.css'
-import Sidenavigation from './components/Sidenavigation'
-import Login from './pages/Login'
-
-function App() {
-  return (
-    <>
-    <Login/>
-    
-    </>
-  )
-=======
 import {} from "react";
 import "./App.css";
 import Sidenavigation from "./components/Sidenavigation";
@@ -26,7 +12,6 @@ function App() {
       <Outlet />
     </div>
   );
->>>>>>> 0138bd27c9d7b36f82e6a4c5acdedf7830fd73ea
 }
 
 export default App;
