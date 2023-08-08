@@ -5,8 +5,9 @@ import ShowCards from './components/cards'
 function App() {
   return (
     <>
+    
 <ShowCards/>
-    </>
+    </> 
   )
 }
 

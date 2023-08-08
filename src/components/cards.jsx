@@ -43,6 +43,7 @@ const cards=[
         
         return(
             <div>
+                <h1>This is a test</h1>
                 {cards.map((card, index)=>(
                     <div className='cardEmergency' key={index}>
 

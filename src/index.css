@@ -10,8 +10,8 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+   -moz-osx-font-smoothing: grayscale; 
+   -webkit-text-size-adjust: 100%; 
 }
 
 a {
@@ -51,9 +51,9 @@ button:hover {
   border-color: #646cff;
 }
 button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+button:focus-visible { 
+   outline: 4px auto -webkit-focus-ring-color; 
+ } 
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -64,6 +64,6 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
   }
 }
