@@ -9,7 +9,7 @@ const ParkData = [
     {
       id: 2,
       Phone: "+254712345678",
-      Location: "Lavingtone",
+      Location: "CBD",
       Date: "23-05-2023",
       Time: "0800Hrs",
     },
