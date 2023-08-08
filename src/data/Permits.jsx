@@ -1,4 +1,4 @@
-const PaymentsData = [
+const PermitsData = [
     {
       id: 1,
       Phone: "+254712345678",
@@ -58,11 +58,11 @@ const PaymentsData = [
   ];
   const columns = [
     { field: "id", headerName: "ID", width: 50 },
-    { field: "Type", headerName: "Type", width: 150 },
-    { field: "Status", headerName: "Status", width: 100 },
-    { field: "Amount", headerName: "Amount", width: 200 },
+    { field: "Phone", headerName: "Phone", width: 150 },
+    { field: "Location", headerName: "Location", width: 100 },
+    { field: "EmergencyType", headerName: "Emergency Type", width: 200 },
     { field: "Date", headerName: "Date", width: 100 },
     { field: "Time", headerName: "Time reported", width: 120 },
   ];
   
-  export { PaymentsData, columns }
+  export { PermitsData, columns }
