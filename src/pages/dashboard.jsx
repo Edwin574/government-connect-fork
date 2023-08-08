@@ -1,4 +1,4 @@
-import React from "react";
+import RevenueChart from "../charts/RevenueChart";
 
 const Dashboard = () => {
   return (
@@ -29,6 +29,7 @@ const Dashboard = () => {
           <span>Payments Made</span>
         </div>
       </div>
+      <RevenueChart />
     </div>
   );
 };
