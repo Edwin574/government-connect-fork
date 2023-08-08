@@ -1,15 +1,17 @@
 import {} from "react";
 import "../styles/components/sidenav.css";
 import logo from "../assets/logo.png";
-import { BiSolidDashboard } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
+//import { BiSolidDashboard } from "react-icons/bi";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Sidenavigation = () => {
   const navs = [
     {
       name: "Dashboard",
-      icon: <BiSolidDashboard />,
-      linkLocation: "/",
+      icon: "",
+      /*icon: {
+        <BiSolidDashboard />
+      }*/ linkLocation: "/",
     },
     {
       name: "Emergency",
@@ -44,7 +46,7 @@ const Sidenavigation = () => {
   ];
 
   return (
-    <div>
+    <div className="sidebar">
       <nav>
         <ul>
           <li>
@@ -54,13 +56,12 @@ const Sidenavigation = () => {
           </li>
           {navs.map((nav, index) => (
             <NavLink key={index} to={nav.linkLocation}>
-              <a href="#">
-                {nav.icon}
-                <span className="nav-item">{nav.name}</span>
-              </a>
+              {/*{nav.icon}*/}
+              <span className="nav-item">{nav.name}</span>
             </NavLink>
           ))}
         </ul>
+        <Outlet />
       </nav>
     </div>
   );
