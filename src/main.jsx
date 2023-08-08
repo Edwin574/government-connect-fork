@@ -17,6 +17,7 @@ import Permits from "./pages/Permits.jsx";
 import PublicSpaces from "./pages/PublicSpaces.jsx";
 import ReportIncidence from "./pages/ReportIncidence.jsx";
 import Signup from "./pages/Signup.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const router = createBrowserRouter(
   createRoutesFromElements(

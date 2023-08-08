@@ -1,68 +1,80 @@
-import {} from "react";
-import "../styles/components/sidenav.css";
-import logo from "../assets/logo.png";
-//import { BiSolidDashboard } from "react-icons/bi";
-import { NavLink, Outlet } from "react-router-dom";
+import {  } from 'react';
+import '../styles/components/sidenav.css'
+import logo from '../assets/logo.png'
+import sakaja from '../assets/sakaja.png'
+import {BiSolidDashboard, BiSolidReport} from 'react-icons/bi'
+import {AiOutlineCar} from 'react-icons/ai'
+import {MdEmergencyShare, MdBusinessCenter, MdWorkspacesFilled, MdPayments, MdLogout} from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 
-const Sidenavigation = () => {
-  const navs = [
-    {
-      name: "Dashboard",
-      icon: "",
-      /*icon: {
-        <BiSolidDashboard />
-      }*/ linkLocation: "/",
-    },
-    {
-      name: "Emergency",
-      icon: "",
-      linkLocation: "emergency",
-    },
-    {
-      name: "Parking",
-      icon: "dash",
-      linkLocation: "parking",
-    },
-    {
-      name: "Business Permits",
-      icon: "dash",
-      linkLocation: "permits",
-    },
-    {
-      name: "Reporting incidences",
-      icon: "dash",
-      linkLocation: "report-incidence",
-    },
-    {
-      name: "Public Spaces",
-      icon: "dash",
-      linkLocation: "public-spaces",
-    },
-    {
-      name: "Make Payments",
-      icon: "dash",
-      linkLocation: "payments",
-    },
-  ];
-
+const Sidenavigation = ()=> { 
+    const navs = [
+        {
+            name: 'Dashboard',
+            icon: <BiSolidDashboard/>
+        },
+        {
+            name: 'Emergency',
+            icon: <MdEmergencyShare/>
+        },
+        {
+            name: 'Parking',
+            icon: <AiOutlineCar/>
+        },
+        {
+            name: 'Business Permits',
+            icon: <MdBusinessCenter/>
+        },
+        {
+            name: 'Reporting incidences',
+            icon: <BiSolidReport/>
+        },
+        {
+            name: 'Public Spaces',
+            icon: <MdWorkspacesFilled/>
+        },
+        {
+            name: 'Make Payments',
+            icon: <MdPayments/>
+        },
+    ]
   return (
-    <div className="sidebar">
-      <nav>
-        <ul>
-          <li>
-            <a href="#">
-              <img className="logo" src={logo} alt="logo" />
-            </a>
-          </li>
-          {navs.map((nav, index) => (
-            <NavLink key={index} to={nav.linkLocation}>
-              {/*{nav.icon}*/}
-              <span className="nav-item">{nav.name}</span>
-            </NavLink>
-          ))}
-        </ul>
-        <Outlet />
-      </nav>
+    <div>
+        <nav>
+            <div className='mainList'>
+                <div className='logoContainer'><a href="#"><img className='logo' src={logo} alt="logo"/></a></div>
+
+                {
+                    navs.map((nav, index) =>
+                         <div key={index} className='list'>
+                            <NavLink to="#">
+                                {nav.icon}
+                                <span className='nav-item'>{nav.name}
+                                </span>
+                            </NavLink>
+                         </div>
+                        )
+                }
+               
+               <hr className='line'/>
+
+               <div className='list'>
+                            <a href="#">
+                                <MdLogout/>
+                                <span className='nav-item'> Logout
+                                </span>
+                            </a>
+                         </div>
+            </div>
+
+            <div className='avatar'>
+                <div><img src={sakaja} alt="avatar"/></div>
+                <div className='text'>
+                    <p>Sakaja</p>
+                    <p>sakaja@gmail.com</p>
+                </div>
+            </div>
+        </nav>
     </div>
   );
 };
