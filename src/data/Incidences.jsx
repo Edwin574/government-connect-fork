@@ -5,7 +5,7 @@ const IncidenceData = [
         Location: "Lavingtone",
         Contact: "+254712345678",
         Date: "23-05-2023",
-        Time: "0800Hrs",
+        Time: "0900Hrs",
       },
     {
         id: 2,
