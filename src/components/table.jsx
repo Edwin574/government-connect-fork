@@ -1,15 +1,13 @@
-import React from "react";
+
 import { Box } from "@mui/material";
-import { EmergencyData } from "../data/emergency";
-import { columns } from "../data/emergency";
 import { DataGrid } from "@mui/x-data-grid";
 
-const Table = () => {
+const Table = ({cols, data}) => {
   return (
     <Box sx={{height:400,width:'100%'}}>
     <DataGrid
-    rows={EmergencyData}
-    columns={columns}
+    rows={data}
+    columns={cols}
     initialState={{
         pagination:{
             paginationModel:{

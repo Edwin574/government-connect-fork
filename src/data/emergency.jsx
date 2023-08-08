@@ -1,6 +1,4 @@
-const EmergencyData={
-    "data":''
-}
+
 const EmergencyData = [
   {
     id: 1,

@@ -1,24 +1,37 @@
-import React from "react";
-import Sidenavigation from "../components/Sidenavigation";
-// import Grid from "@mui/system/Unstable_Grid/Grid";
-// import {styled} from "@emotion/styled";
-// import { Paper } from "@mui/material/Paper";
-// import Box from "@mui/material/Box";
+import {} from "react";
+import ShowCards from "../components/cards";
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
+import AddBusinessTwoToneIcon from '@mui/icons-material/AddBusinessTwoTone';
+import SummarizeIcon from '@mui/icons-material/Summarize';
+import OtherHousesIcon from '@mui/icons-material/OtherHouses';
+import PaidIcon from '@mui/icons-material/Paid';
+import '../styles/pages/dashboard.css'
+import RevenueChart from "../charts/RevenueChart";
+
 
 const Dashboard = () => {
   return (
-    <div className="dashboard container">
-    <div className="row">
-    <div className="col col-1 fixed">
-    <Sidenavigation/>
-    </div>
-    <div className="col col-11">
-    <div className="row shadow p-4 border text-center mt-2" style={{width:'100%'}}> top</div>
-    <div className="row shadow my-5 p-4 shadow" style={{}}>cards</div>
-    <div className="row shadow my-4 shadow align-self-center mx-5" style={{width:'700px',height:'300px'}}>chart</div>
-    <div className="row shadow my-5 shadow mx-5" style={{width:'700px',height:'300px'}}>chart</div>
-    </div>
-    </div>
+    <div className="dashContainer">
+      {/* cards */}
+      <div className="mainCards">
+      <ShowCards icon={<LocalHospitalIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<LocalParkingIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<SummarizeIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<OtherHousesIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<PaidIcon/> }name="Emergency Services" numbers="3000"/>
+      </div>
+
+      {/* chart */}
+      <div className="chart">
+        <RevenueChart/>
+      </div>
+
+      {/* chart 2 */}
+      <div className="chart">
+        <RevenueChart/>
+      </div>
     </div>
   );
 };
