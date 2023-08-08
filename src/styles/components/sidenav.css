@@ -25,6 +25,7 @@ nav{
 }
 .list a{
     color: #fff;
+    text-decoration: none;
 }
 .list span{
     padding-left: 20px;

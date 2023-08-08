@@ -2,7 +2,10 @@ import {  } from 'react';
 import '../styles/components/sidenav.css'
 import logo from '../assets/logo.png'
 import sakaja from '../assets/sakaja.png'
-import {BiSolidDashboard} from 'react-icons/bi'
+import {BiSolidDashboard, BiSolidReport} from 'react-icons/bi'
+import {AiOutlineCar} from 'react-icons/ai'
+import {MdEmergencyShare, MdBusinessCenter, MdWorkspacesFilled, MdPayments, MdLogout} from 'react-icons/md'
+import { NavLink } from 'react-router-dom';
 
 const Sidenavigation = ()=> { 
     const navs = [
@@ -12,27 +15,27 @@ const Sidenavigation = ()=> {
         },
         {
             name: 'Emergency',
-            icon: <BiSolidDashboard/>
+            icon: <MdEmergencyShare/>
         },
         {
             name: 'Parking',
-            icon: <BiSolidDashboard/>
+            icon: <AiOutlineCar/>
         },
         {
             name: 'Business Permits',
-            icon: <BiSolidDashboard/>
+            icon: <MdBusinessCenter/>
         },
         {
             name: 'Reporting incidences',
-            icon: <BiSolidDashboard/>
+            icon: <BiSolidReport/>
         },
         {
             name: 'Public Spaces',
-            icon: <BiSolidDashboard/>
+            icon: <MdWorkspacesFilled/>
         },
         {
             name: 'Make Payments',
-            icon: <BiSolidDashboard/>
+            icon: <MdPayments/>
         },
     ]
   return (
@@ -44,11 +47,11 @@ const Sidenavigation = ()=> {
                 {
                     navs.map((nav, index) =>
                          <div key={index} className='list'>
-                            <a href="#">
+                            <NavLink to="#">
                                 {nav.icon}
                                 <span className='nav-item'>{nav.name}
                                 </span>
-                            </a>
+                            </NavLink>
                          </div>
                         )
                 }
@@ -57,7 +60,7 @@ const Sidenavigation = ()=> {
 
                <div className='list'>
                             <a href="#">
-                                <BiSolidDashboard/>
+                                <MdLogout/>
                                 <span className='nav-item'> Logout
                                 </span>
                             </a>
