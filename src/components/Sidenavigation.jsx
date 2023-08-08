@@ -1,80 +1,58 @@
-import {} from 'react'
-import '../styles/sidenav.css'
+import {  } from 'react';
+import '../styles/components/sidenav.css'
+import logo from '../assets/logo.png'
+import {BiSolidDashboard} from 'react-icons/bi'
 
-const Sidenavigation = ()=> {
-    // const links = [
-    //     {
-    //         navName: 'Dashboard',
-    //         class: 'zmdi zmdi-view-dashboard'
-    //     },
-        
-    // ]
+const Sidenavigation = ()=> { 
+    const navs = [
+        {
+            name: 'Dashboard',
+            icon: <BiSolidDashboard/>
+        },
+        {
+            name: 'Emergency',
+            icon: ''
+        },
+        {
+            name: 'Parking',
+            icon: 'dash'
+        },
+        {
+            name: 'Business Permits',
+            icon: 'dash'
+        },
+        {
+            name: 'Reporting incidences',
+            icon: 'dash'
+        },
+        {
+            name: 'Public Spaces',
+            icon: 'dash'
+        },
+        {
+            name: 'Make Payments',
+            icon: 'dash'
+        },
+    ]
   return (
     <div>
-      <div id="viewport">
-  <div id="sidebar">
-    <header>
-      <a href="#">LOGO</a>
-    </header>
-    <ul className="nav">
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-view-dashboard"></i> Dashboard
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-link"></i> Shortcuts
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-widgets"></i> Overview
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-calendar"></i> Events
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-info-outline"></i> About
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-settings"></i> Services
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <i className="zmdi zmdi-comment-more"></i> Contact
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="content">
-    <nav className="navbar navbar-default">
-      <div className="container-fluid">
-        <ul className="nav navbar-nav navbar-right">
-          <li>
-            <a href="#"><i className="zmdi zmdi-notifications text-danger"></i>
-            </a>
-          </li>
-          <li><a href="#">Test User</a></li>
-        </ul>
-      </div>
-    </nav>
-    <div className="container-fluid">
-      <h1>Simple Sidebar</h1>
-      <p>
-        Make sure to keep all page content within the 
-        <code>#content</code>.
-      </p>
-    </div>
-  </div>
-</div>
+        <nav>
+            <ul>
+                <li><a href="#"><img className='logo' src={logo} alt="logo"/></a></li>
+                {
+                    navs.map((nav, index) =>
+                         <li key={index}>
+                            <a href="#">
+                                {nav.icon}
+                                <span className='nav-item'>{nav.name}
+                                </span>
+                            </a>
+                         </li>
+                        )
+                }
+               
+            </ul>
+        </nav>
     </div>
   )
 }
