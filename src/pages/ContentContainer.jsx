@@ -18,10 +18,10 @@ const ContentContainer = () => {
         <Route path="emergency" exact element={<Emergency/>} />
         <Route path="login" exact element={<Login />} />
         <Route path="parking" exact element={<Parking />} />
-        <Route path="reporting-incidences" exact element={<Payments />} />
+        <Route path="reporting-incidences" exact element={<ReportIncidence />} />
         <Route path="business-permits" exact element={<Permits />} />
         <Route path="public-spaces" exact element={<PublicSpaces />} />
-        <Route path="report-incidence" exact element={<ReportIncidence />} />
+        <Route path="payments" exact element={<Payments />} />
      </Routes>   
       {/* <Dashboard/> */}
     </div>

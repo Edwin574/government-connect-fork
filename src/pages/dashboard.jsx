@@ -16,11 +16,11 @@ const Dashboard = () => {
       {/* cards */}
       <div className="mainCards">
       <ShowCards icon={<LocalHospitalIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<LocalParkingIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<AddBusinessTwoToneIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<SummarizeIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<OtherHousesIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<PaidIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<LocalParkingIcon/> }name="Parking" numbers="2000"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> }name="Business Parking" numbers="300"/>
+      <ShowCards icon={<SummarizeIcon/> }name="Reported Incidences" numbers="400"/>
+      <ShowCards icon={<OtherHousesIcon/> }name="Public Spaces" numbers="500"/>
+      <ShowCards icon={<PaidIcon/> }name="Payments Made" numbers="1000"/>
       </div>
 
       {/* chart */}

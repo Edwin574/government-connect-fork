@@ -1,7 +1,7 @@
 import '../styles/pages/dashboard.css'
 import ShowCards from '../components/cards'
-import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
-import LocalParkingIcon from '@mui/icons-material/LocalParking';
+// import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+// import LocalParkingIcon from '@mui/icons-material/LocalParking';
 import AddBusinessTwoToneIcon from '@mui/icons-material/AddBusinessTwoTone';
 import Table from '../components/table';
 import RevenueChart from '../charts/RevenueChart';
@@ -12,9 +12,9 @@ const Permits = () => {
   return (
     <div>
       <div className="mainCards">
-      <ShowCards icon={<LocalHospitalIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<LocalParkingIcon/> }name="Emergency Services" numbers="3000"/>
-      <ShowCards icon={<AddBusinessTwoToneIcon/> }name="Emergency Services" numbers="3000"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Permit Requests" numbers="2330"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Granted Permits" numbers="1570"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Pending Permits" numbers="600"/>
       </div>
 
       <div>
