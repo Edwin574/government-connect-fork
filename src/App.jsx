@@ -1,10 +1,12 @@
-import {} from "react";
-import "./App.css";
-import Table from "./components/table";
+import {} from 'react'
+import './App.css'
+
 function App() {
-  return <div>
-  <Table/>
-  </div>;
+  return (
+    <>
+
+    </>
+  )
 }
 
-export default App;
+export default App
