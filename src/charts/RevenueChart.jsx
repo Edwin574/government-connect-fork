@@ -67,7 +67,7 @@ function RevenueChart() {
     },
   ];
 
-  const valueFormatter = (value) => `${value}mm`;
+  const valueFormatter = (value) => `${value}`;
 
   return (
     <div className="revenue__chart">
