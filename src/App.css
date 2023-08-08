@@ -1,3 +1,4 @@
+
 .cards {
   display: flex;
   border: 5px solid;
@@ -39,6 +40,12 @@ color:aliceblue;
 
 .cardName:hover{
   color:red;
+
+.app {
+background-color: #F4F7FF;
+height: 100vh;
+overflow-x: hidden;
+
 }
 
 .cardNumber{

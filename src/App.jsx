@@ -1,14 +1,22 @@
-import {} from 'react'
-import './App.css'
-import ShowCards from './components/cards'
+
+import {} from "react";
+import "./App.css";
+import Sidenavigation from "./components/Sidenavigation";
+// import Topbar from "./components/Topbar";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Outlet } from "react-router-dom";
+
 
 function App() {
   return (
-    <>
-    
-<ShowCards/>
-    </> 
-  )
+    <div className="app">
+      <Sidenavigation />
+      
+      {/* <TopBar/> */}
+      {/* <Outlet /> */}
+    </div>
+  );
+
 }
 
-export default App
+export default App;
