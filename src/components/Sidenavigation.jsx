@@ -1,79 +1,70 @@
-import {  } from 'react';
-import '../styles/components/sidenav.css'
-import logo from '../assets/logo.png'
-import sakaja from '../assets/sakaja.png'
-import {BiSolidDashboard} from 'react-icons/bi'
+import {} from "react";
+import "../styles/components/sidenav.css";
+import logo from "../assets/logo.png";
+//import { BiSolidDashboard } from "react-icons/bi";
+import { NavLink, Outlet } from "react-router-dom";
 
-const Sidenavigation = ()=> { 
-    const navs = [
-        {
-            name: 'Dashboard',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Emergency',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Parking',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Business Permits',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Reporting incidences',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Public Spaces',
-            icon: <BiSolidDashboard/>
-        },
-        {
-            name: 'Make Payments',
-            icon: <BiSolidDashboard/>
-        },
-    ]
+const Sidenavigation = () => {
+  const navs = [
+    {
+      name: "Dashboard",
+      icon: "",
+      /*icon: {
+        <BiSolidDashboard />
+      }*/ linkLocation: "/",
+    },
+    {
+      name: "Emergency",
+      icon: "",
+      linkLocation: "emergency",
+    },
+    {
+      name: "Parking",
+      icon: "dash",
+      linkLocation: "parking",
+    },
+    {
+      name: "Business Permits",
+      icon: "dash",
+      linkLocation: "permits",
+    },
+    {
+      name: "Reporting incidences",
+      icon: "dash",
+      linkLocation: "report-incidence",
+    },
+    {
+      name: "Public Spaces",
+      icon: "dash",
+      linkLocation: "public-spaces",
+    },
+    {
+      name: "Make Payments",
+      icon: "dash",
+      linkLocation: "payments",
+    },
+  ];
+
   return (
-    <div>
-        <nav>
-            <div className='mainList'>
-                <div className='logoContainer'><a href="#"><img className='logo' src={logo} alt="logo"/></a></div>
-
-                {
-                    navs.map((nav, index) =>
-                         <div key={index} className='list'>
-                            <a href="#">
-                                {nav.icon}
-                                <span className='nav-item'>{nav.name}
-                                </span>
-                            </a>
-                         </div>
-                        )
-                }
-               
-               <hr className='line'/>
-
-               <div className='list'>
-                            <a href="#">
-                                <BiSolidDashboard/>
-                                <span className='nav-item'> Logout
-                                </span>
-                            </a>
-                         </div>
-            </div>
-
-            <div className='avatar'>
-                <div><img src={sakaja} alt="avatar"/></div>
-                <div className='text'>
-                    <p>Sakaja</p>
-                    <p>sakaja@gmail.com</p>
-                </div>
-            </div>
-        </nav>
+    <div className="sidebar">
+      <nav>
+        <ul>
+          <li>
+            <a href="#">
+              <img className="logo" src={logo} alt="logo" />
+            </a>
+          </li>
+          {navs.map((nav, index) => (
+            <NavLink key={index} to={nav.linkLocation}>
+              {/*{nav.icon}*/}
+              <span className="nav-item">{nav.name}</span>
+            </NavLink>
+          ))}
+        </ul>
+        <Outlet />
+      </nav>
     </div>
-  )
-}
+  );
+};
 
-export default Sidenavigation
+export default Sidenavigation;

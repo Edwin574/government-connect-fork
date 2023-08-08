@@ -1,9 +1,36 @@
-import React from 'react'
+import React from "react";
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
-    <div>dashboard</div>
-  )
-}
+    <div className="dashboard">
+      <div className="cards">
+        <div className="card">
+          <span>675</span>
+          <span>Emergency Services</span>
+        </div>
+        <div className="card">
+          <span>675</span>
+          <span>Parking</span>
+        </div>
+        <div className="card">
+          <span>675</span>
+          <span>Business Permits</span>
+        </div>
+        <div className="card">
+          <span>675</span>
+          <span>Reported Incidences</span>
+        </div>
+        <div className="card">
+          <span>675</span>
+          <span>Public Spaces</span>
+        </div>
+        <div className="card">
+          <span>675</span>
+          <span>Payments Made</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default dashboard
+export default Dashboard;
