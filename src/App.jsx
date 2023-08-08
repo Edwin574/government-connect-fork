@@ -1,13 +1,17 @@
-import {} from 'react'
-import './App.css'
-import Sidenavigation from './components/Sidenavigation'
+import {} from "react";
+import "./App.css";
+import Sidenavigation from "./components/Sidenavigation";
+// import TopBar from "./components/topbar";
+// import { Outlet } from "react-router-dom";
 
 function App() {
   return (
-    <>
-    <Sidenavigation/>
-    </>
-  )
+    <div className="app">
+      <Sidenavigation />
+      {/* <TopBar/> */}
+      {/* <Outlet /> */}
+    </div>
+  );
 }
 
-export default App
+export default App;
