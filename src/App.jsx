@@ -1,3 +1,4 @@
+
 import {} from "react";
 import "./App.css";
 import Sidenavigation from "./components/Sidenavigation";
@@ -15,6 +16,7 @@ function App() {
       {/* <Outlet /> */}
     </div>
   );
+
 }
 
 export default App;
