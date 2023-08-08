@@ -42,6 +42,8 @@ color:aliceblue;
   color:red;
 
 .app {
+  display: flex;
+
 background-color: #F4F7FF;
 height: 100vh;
 overflow-x: hidden;
