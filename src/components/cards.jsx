@@ -9,53 +9,51 @@ import PaidIcon from '@mui/icons-material/Paid';
 const cards=[
     {
         name:"Emergency Services",
-        numbers:"675",
-        icon:LocalHospitalIcon
+        numbers:"123",
+        icon:<LocalHospitalIcon/>
     },
     {
         name:"Parking",
-        numbers:"675",
-        icon:LocalParkingIcon
+        numbers:"342",
+        icon:<LocalParkingIcon/>
     },
     {
         name:"Business Permits",
-        numbers:"675",
-        iconUrl:AddBusinessTwoToneIcon
+        numbers:"102",
+        icon:<AddBusinessTwoToneIcon/>
     },
     {
         name:"Reported Incidences",
-        numbers:"675",
-        icon:SummarizeIcon
+        numbers:"32",
+        icon:<SummarizeIcon/>
     },
     {
         name:"Public Spaces",
-        numbers:"675",
-        icon:OtherHousesIcon
+        numbers:"85",
+        icon:<OtherHousesIcon/>
     },
     {
         name:"Payments Made",
-        numbers:"675",
-        icon:PaidIcon
+        numbers:"235",
+        icon:<PaidIcon/>
     }
 ]
 
     const ShowCards=()=>{
         
         return(
-            <div>
-                <h1>This is a test</h1>
+            <div className='cards'>
                 {cards.map((card, index)=>(
-                    <div className='cardEmergency' key={index}>
+                    <div className='card' key={index}>
 
-                        <div>
-                        <span className='cardIcon'><card.icon/></span>
-                        <span className='cardNumber'><card.numbers/></span>
-                          </div>
+                        <div className="cardTop">
+                        <span className='cardIcon'>{card.icon}</span>
+                        <span className='cardNumber'>{card.numbers}</span>
+                         </div>
 
-                          <div>
-                           <span className='cardName'><card.name/></span>
-                          </div>
-
+                         <div className="cardBottom">
+                        <span className='cardName'>{card.name}</span>
+                    </div>
                         </div>                              
                 ))}
             </div>
