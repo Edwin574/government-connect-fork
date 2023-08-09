@@ -11,28 +11,28 @@ import Login from "./pages/Login";
 
 
 function App() {
-  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-  // const handleButtonClick = () =>{
-  //   setIsLoggedIn(true)
-  // }
+  const handleButtonClick = () =>{
+    setIsLoggedIn(true)
+  }
+  const handleLogout = () =>{
+    setIsLoggedIn(false)
+  }
   return (
     <>
       <div className="app">
-        {/* {
-          isLoggedIn?  */}
+        {
+          isLoggedIn? 
           <div>
-            <Sidenavigation/>
+            <Sidenavigation logout={handleLogout}/>
             <TopBar/>
             <ContentContainer/>
           </div>
-        {/* : */}
-        {/* <Login clickButton={handleButtonClick}/> */}
+        : 
+        <Login clickButton={handleButtonClick}/>
 
-        {/* } */}
-        
-        
-        {/* <Dashboard/> */}
+        }
         <Outlet />
       </div>
     </>
