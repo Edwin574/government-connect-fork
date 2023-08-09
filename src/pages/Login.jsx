@@ -1,5 +1,6 @@
 import "../styles/pages/login.css";
 import PropTypes from 'prop-types';
+import logo from "../assets/logo.jpeg";
 
 const Login = ({ clickButton }) => {
   return (

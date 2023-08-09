@@ -9,7 +9,7 @@ const TopBar = () => {
     <div className='TopBar'>
       <div className='TopBarIntro'>
         <p className='first'>Hello User!</p>
-        <p>Welcome back to the Dashboard</p>
+        <p className='second'>Welcome back to the Dashboard</p>
       </div>
       <div className="searchBar">
         <input type="text" placeholder='Search...'/>
