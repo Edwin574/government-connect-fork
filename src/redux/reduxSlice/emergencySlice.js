@@ -20,7 +20,6 @@ const emergencySlice = createSlice({
   name: "emergency",
   initialState,
   extraReducers: (builder) => {
-    console.log(builder);
     builder.addCase(fetchEmergency.pending, (state) => {
       state.loading = true;
     });

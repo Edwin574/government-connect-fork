@@ -7,7 +7,7 @@ import Table from "../components/table";
 
 import "../styles/components/tables.css";
 
-import Barchart from "../charts/Barchart";
+import Linechart from "../charts/Linechart";
 import { SpacesData } from "../data/Spaces";
 import { columns } from "../data/Spaces";
 import { useDispatch, useSelector } from "react-redux";
@@ -53,7 +53,7 @@ const PublicSpaces = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );

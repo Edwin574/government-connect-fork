@@ -46,12 +46,6 @@ const Dashboard = () => {
     dispatch(fetchPublicSpace())
   }, [dispatch])*/
 
-  /*useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => console.log(response.data));
-  }, []);*/
-
   console.log(emergency);
 
   return (

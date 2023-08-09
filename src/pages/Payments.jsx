@@ -5,7 +5,7 @@ import ShowCards from "../components/cards";
 import PaidIcon from "@mui/icons-material/Paid";
 import "../styles/pages/dashboard.css";
 import Table from "../components/table";
-import Barchart from "../charts/Barchart";
+import Linechart from "../charts/Linechart";
 import { PaymentData } from "../data/payment";
 import { columns } from "../data/payment";
 import { useDispatch, useSelector } from "react-redux";
@@ -51,7 +51,7 @@ const Payments = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );

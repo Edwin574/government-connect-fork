@@ -4,13 +4,13 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import AddBusinessTwoToneIcon from "@mui/icons-material/AddBusinessTwoTone";
 import Table from "../components/table";
-import Barchart from "../charts/Barchart";
 import { IncidenceData } from "../data/Incidences";
 import "../styles/components/tables.css";
 import { columns } from "../data/Incidences";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { fetchIncidence } from "../redux/reduxSlice/incidenceSlice";
+import Linechart from "../charts/Linechart";
 
 const ReportIncidence = () => {
   const incidence = useSelector((state) => state.incidence.incidence);
@@ -51,7 +51,7 @@ const ReportIncidence = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );

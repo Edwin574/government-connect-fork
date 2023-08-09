@@ -4,7 +4,7 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import AddBusinessTwoToneIcon from "@mui/icons-material/AddBusinessTwoTone";
 import Table from "../components/table";
-import Barchart from "../charts/Barchart";
+import Linechart from "../charts/Linechart";
 import { EmergencyData } from "../data/emergency";
 import { columns } from "../data/emergency";
 
@@ -53,7 +53,7 @@ const Emergency = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import Table from "../components/table";
 
 import "../styles/components/tables.css";
 
-import Barchart from "../charts/Barchart";
+import Linechart from "../charts/Linechart";
 import { ParkData } from "../data/park";
 import { columns } from "../data/park";
 import { useDispatch, useSelector } from "react-redux";
@@ -45,7 +45,7 @@ const Parking = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );
