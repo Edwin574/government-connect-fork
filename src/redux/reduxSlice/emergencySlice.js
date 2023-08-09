@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
 
 const initialState = {
   loading: false,
@@ -6,16 +7,20 @@ const initialState = {
   error: "",
 };
 
-const fetchEmergency = createAsyncThunk("emergency/fetchEmergency", () => {
-  return axios
-    .get("https://2440-41-84-159-198.ngrok-free.app/emergencies/read")
-    .then((response) => response.data);
-});
+const fetchEmergency = createAsyncThunk(
+  "emergency/fetchEmergency",
+  async () => {
+    const response = await axios.get("http://127.0.0.1:8080/emergencies/read");
+    console.log(response.data);
+    return response.data;
+  }
+);
 
 const emergencySlice = createSlice({
   name: "emergency",
   initialState,
   extraReducers: (builder) => {
+    console.log(builder);
     builder.addCase(fetchEmergency.pending, (state) => {
       state.loading = true;
     });
@@ -33,5 +38,5 @@ const emergencySlice = createSlice({
 });
 
 export { fetchEmergency };
-export const { addEmergency } = emergencySlice.actions;
+//export const { addEmergency } = emergencySlice.actions;
 export default emergencySlice.reducer;

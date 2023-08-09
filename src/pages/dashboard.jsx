@@ -15,6 +15,7 @@ import { fetchParking } from "../redux/reduxSlice/parkingSlice";
 import { fetchPayment } from "../redux/reduxSlice/paymentSlice";
 import { fetchPermit } from "../redux/reduxSlice/permitSlice";
 import { fetchPublicSpace } from "../redux/reduxSlice/publicSpaceSlice";
+import axios from "axios";
 
 const Dashboard = () => {
   const emergency = useSelector((state) => state.emergency.emergency);
@@ -28,22 +29,28 @@ const Dashboard = () => {
 
   useEffect(() => {
     dispatch(fetchEmergency());
-  }, []);
+  }, [dispatch]);
   /*useEffect(() => {
     dispatch(fetchIncidence())
-  }, [incidence])*/
+  }, [dispatch])*/
   /*useEffect(() => {
     dispatch(fetchParking())
-  }, [parking])*/
+  }, [dispatch])*/
   /*useEffect(() => {
     dispatch(fetchPayment())
-  }, [payment])*/
+  }, [dispatch])*/
   /*useEffect(() => {
     dispatch(fetchPermit())
-  }, [permit])*/
+  }, [dispatch])*/
   /*useEffect(() => {
     dispatch(fetchPublicSpace())
-  }, [publicSpace])*/
+  }, [dispatch])*/
+
+  /*useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => console.log(response.data));
+  }, []);*/
 
   console.log(emergency);
 
