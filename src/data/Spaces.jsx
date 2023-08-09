@@ -52,7 +52,7 @@ const SpacesData = [
     Phone: "+254712345678",
     Location: "Lavingtone",
     EmergencyType: "fire",
-    Date: "23-05-2023",
+    Date: "23-05-2023", 
     Time: "0800Hrs",
   },
 ];

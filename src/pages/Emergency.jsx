@@ -20,17 +20,16 @@ const Emergency = () => {
   
   useEffect(() => {
     axios
-      .get("https://2440-41-84-159-198.ngrok-free.app/emergencies/read")
+      .get("https://jsonplaceholder.typicode.com/posts")
       .then((res) => {
-        console.log(res);
-        setemData(res);
-      }).catch((error)=>{
-        console.log(error)
-      });
+        console.log(res.data);
+        // setemData(res);
+      }).catch(err => console.log("could not fetch data", err))
   },[]);
   // console.log('emergencydata',emdata)
   return (
     <div>
+    
       <div className="mainCards">
         <ShowCards
           icon={<LocalHospitalIcon />}
