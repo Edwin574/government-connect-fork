@@ -107,7 +107,7 @@ const Sidenavigation = ({logout}) => {
         </div>
 
         <div className="avatar">
-          <div className="avatarimg">
+          <div className="avatarImg">
             <img src={avatar} alt="avatar" />
           </div>
           <div className="text">
