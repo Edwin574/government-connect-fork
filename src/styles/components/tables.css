@@ -1,0 +1,14 @@
+.table-containter{
+    margin:2em;
+    /* background-color: red; */
+    padding: 2%;
+    border-radius: 50px;
+    text-align: 'center';
+    box-shadow: 1px 1px 8px black;
+    /* color: red; */
+}
+.column-label{
+    font-weight: 'bolder';
+    color: black;
+    font-size: 1.2em;
+}

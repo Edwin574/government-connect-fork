@@ -1,4 +1,54 @@
+<<<<<<< HEAD
+
+.cards {
+  display: flex;
+  border: 5px solid;
+  width: min-content;
+  height: max-content;
+  justify-content: flex-end;
+  border-color: yellow;
+}
+
+.card{
+border: 2px dashed yellow;
+border-top: none;
+border-bottom: none;
+padding:10px;
+cursor: pointer;
+color:yellow;
+/* position: ; */
+background-color: green;
+}
+
+.cardTop{
+  display: flex;
+}
+
+.cardBottom{
+  display: flex;
+}
+
+.cardIcon{
+font-size: 10px;
+}
+
+.cardName{
+justify-content:baseline;
+font-size: 10px;
+color:aliceblue;
+
+}
+
+.cardName:hover{
+  color:red;
+}
+=======
+>>>>>>> 9688ff73a6c95b0fba949da92b6232a695affb72
 .app {
     background-color: #F4F7FF;
     overflow-x: hidden;
 }
+<<<<<<< HEAD
+
+=======
+>>>>>>> 9688ff73a6c95b0fba949da92b6232a695affb72

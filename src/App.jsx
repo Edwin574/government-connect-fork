@@ -1,7 +1,6 @@
 
 import { useState } from "react";
 import "./App.css";
-
 import Sidenavigation from "./components/Sidenavigation";
 import TopBar from "./components/topbar";
 import ContentContainer from "./pages/ContentContainer";
@@ -36,7 +35,6 @@ function App() {
         <Outlet />
       </div>
     </>
-    
   );
 
 }

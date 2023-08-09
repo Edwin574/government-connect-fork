@@ -1,4 +1,3 @@
-
 const EmergencyData = [
   {
     id: 1,
@@ -7,14 +6,16 @@ const EmergencyData = [
     EmergencyType: "fire",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
   {
     id: 2,
     Phone: "+254712345678",
     Location: "Lavingtone",
-    EmergencyType: "fire",
+    EmergencyType: "Ambulance",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "pending",
   },
   {
     id: 3,
@@ -23,6 +24,7 @@ const EmergencyData = [
     EmergencyType: "fire",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
   {
     id: 4,
@@ -31,6 +33,7 @@ const EmergencyData = [
     EmergencyType: "fire",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
   {
     id: 5,
@@ -39,14 +42,16 @@ const EmergencyData = [
     EmergencyType: "fire",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
   {
     id: 6,
     Phone: "+254712345678",
     Location: "Lavingtone",
-    EmergencyType: "fire",
+    EmergencyType: "Accident",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
   {
     id: 7,
@@ -55,15 +60,74 @@ const EmergencyData = [
     EmergencyType: "fire",
     Date: "23-05-2023",
     Time: "0800Hrs",
+    Status: "solved",
   },
 ];
+const header = "column-label";
 const columns = [
-  { field: "id", headerName: "ID", width: 50 },
-  { field: "Phone", headerName: "Phone", width: 150 },
-  { field: "Location", headerName: "Location", width: 100 },
-  { field: "EmergencyType", headerName: "Emergency Type", width: 200 },
-  { field: "Date", headerName: "Date", width: 100 },
-  { field: "Time", headerName: "Time reported", width: 120 },
+  {
+    field: "id",
+    headerName: "ID",
+    width: 50,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "Phone",
+    headerName: "Phone",
+    width: 150,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "Location",
+    headerName: "Location",
+    width: 100,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "EmergencyType",
+    headerName: "Emergency Type",
+    width: 200,
+    align: "center",
+    headerAlign: "center",
+    flex: 1,
+    headerClassName: header,
+  },
+  {
+    field: "Date",
+    headerName: "Date",
+    width: 100,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "Time",
+    headerName: "Time reported",
+    width: 120,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "Status",
+    headerName: "Status",
+    width: 120,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
 ];
 
-export { EmergencyData, columns }
+export { EmergencyData, columns };
