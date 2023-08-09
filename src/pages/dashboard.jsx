@@ -8,8 +8,16 @@ import OtherHousesIcon from "@mui/icons-material/OtherHouses";
 import PaidIcon from "@mui/icons-material/Paid";
 import "../styles/pages/dashboard.css";
 import Barchart from "../charts/Barchart";
+import { useSelector } from "react-redux";
 
 const Dashboard = () => {
+  const emergency = useSelector((state) => state.emergency.emergency);
+  const incidence = useSelector((state) => state.incidence.incidence);
+  const parking = useSelector((state) => state.parking.parking);
+  const payment = useSelector((state) => state.payment.payment);
+  const permit = useSelector((state) => state.permit.permit);
+  const publicSpaces = useSelector((state) => state.publicSpaces.publicSpaces);
+
   return (
     <div className="dashContainer">
       {/* cards */}

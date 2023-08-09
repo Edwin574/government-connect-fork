@@ -9,6 +9,8 @@ import { IncidenceData } from "../data/Incidences";
 import { columns } from "../data/Incidences";
 
 const ReportIncidence = () => {
+  const incidence = useSelector((state) => state.incidence.incidence);
+
   return (
     <div>
       <div className="mainCards">

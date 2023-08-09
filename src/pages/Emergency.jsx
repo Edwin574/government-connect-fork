@@ -7,8 +7,12 @@ import Table from "../components/table";
 import Barchart from "../charts/Barchart";
 import { EmergencyData } from "../data/emergency";
 import { columns } from "../data/emergency";
+import { useDispatch } from "react-redux";
 
 const Emergency = () => {
+  const emergency = useSelector((state) => state.emergency.emergency);
+  const dispatch = useDispatch();
+
   return (
     <div>
       <div className="mainCards">

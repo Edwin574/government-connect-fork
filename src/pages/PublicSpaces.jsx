@@ -9,6 +9,8 @@ import { SpacesData } from "../data/Spaces";
 import { columns } from "../data/Spaces";
 
 const PublicSpaces = () => {
+  const publicSpaces = useSelector((state) => state.publicSpaces.publicSpaces);
+
   return (
     <div>
       <div className="mainCards">

@@ -8,6 +8,8 @@ import { ParkData } from "../data/park";
 import { columns } from "../data/park";
 
 const Parking = () => {
+  const parking = useSelector((state) => state.parking.parking);
+
   return (
     <div>
       <div className="mainCards">

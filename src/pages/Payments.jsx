@@ -8,6 +8,8 @@ import { PaymentData } from "../data/payment";
 import { columns } from "../data/payment";
 
 const Payments = () => {
+  const payment = useSelector((state) => state.payment.payment);
+
   return (
     <div>
       <div className="mainCards">

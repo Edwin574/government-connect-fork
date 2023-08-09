@@ -9,6 +9,8 @@ import { ParkData } from "../data/park";
 import { columns } from "../data/park";
 
 const Permits = () => {
+  const permit = useSelector((state) => state.permit.permit);
+
   return (
     <div>
       <div className="mainCards">
