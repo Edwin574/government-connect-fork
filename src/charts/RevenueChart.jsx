@@ -7,9 +7,9 @@ function RevenueChart() {
         label: "revenue",
       },
     ],
-    width: 500,
-    height: 300,
-    sx: {
+    width: 700,
+    height: 400,
+    sx: { 
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         transform: "rotate(-90deg) translate(0px, -20px)",
       },
@@ -67,7 +67,7 @@ function RevenueChart() {
     },
   ];
 
-  const valueFormatter = (value) => `${value}mm`;
+  const valueFormatter = (value) => `${value}`;
 
   return (
     <div className="revenue__chart">
