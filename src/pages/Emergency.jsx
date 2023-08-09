@@ -12,9 +12,9 @@ const Emergency = () => {
   return (
     <div>
       <div className="mainCards">
-      <ShowCards icon={<LocalHospitalIcon/> } name="Emergency Services" numbers="300"/>
-      <ShowCards icon={<LocalParkingIcon/> } name="Solved Emergencies" numbers="200"/>
-      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Pending Emergency" numbers="20"/>
+      <ShowCards icon={<LocalHospitalIcon/> } name="Emergency Services" numbers="300" percent={100} bg='light'/>
+      <ShowCards icon={<LocalParkingIcon/> } name="Solved Emergencies" numbers="200" percent={80} bg='normal'/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Pending Emergency" numbers="20" percent={20} bg='light'/>
       </div>
 
       <div className='table-containter'>

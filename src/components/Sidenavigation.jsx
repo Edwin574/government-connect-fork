@@ -1,7 +1,7 @@
 import {  } from 'react';
 import '../styles/components/sidenav.css'
 import logo from '../assets/logo.png'
-import sakaja from '../assets/sakaja.png'
+import avatar from '../assets/avatar.png'
 import {BiSolidDashboard, BiSolidReport} from 'react-icons/bi'
 import {AiOutlineCar} from 'react-icons/ai'
 import {MdEmergencyShare, MdBusinessCenter, MdWorkspacesFilled, MdPayments, MdLogout} from 'react-icons/md'
@@ -11,38 +11,45 @@ const Sidenavigation = ()=> {
     const navs = [
         {
             name: 'Dashboard',
-            icon: <BiSolidDashboard/>,
+            icon: <BiSolidDashboard className='icon'/>,
             link: "/",
+            active: 'active',
         },
         {
             name: 'Emergency',
-            icon: <MdEmergencyShare/>,
+            icon: <MdEmergencyShare className='icon'/>,
             link: "emergency",
+            active: '',
         },
         {
             name: 'Parking',
-            icon: <AiOutlineCar/>,
+            icon: <AiOutlineCar className='icon'/>,
             link: "parking",
+            active: '',
         },
         {
             name: 'Business Permits',
-            icon: <MdBusinessCenter/>,
+            icon: <MdBusinessCenter className='icon'/>,
             link: "business-permits",
+            active: '',
         },
         {
             name: 'Reporting incidences',
-            icon: <BiSolidReport/>,
+            icon: <BiSolidReport className='icon'/>,
             link: "reporting-incidences",
+            active: '',
         },
         {
             name: 'Public Spaces',
-            icon: <MdWorkspacesFilled/>,
+            icon: <MdWorkspacesFilled className='icon'/>,
             link: "public-spaces",
+            active: '',
         },
         {
             name: 'Make Payments',
-            icon: <MdPayments/>,
+            icon: <MdPayments className='icon'/>,
             link: "payments",
+            active: '',
         },
     ]
   return (
@@ -50,13 +57,13 @@ const Sidenavigation = ()=> {
         <nav>
             <div className='mainList'>
                 <div className='logoContainer'><a href="#"><img className='logo' src={logo} alt="logo"/></a></div>
-
+            <hr className="line"/>
                 {
                     navs.map((nav, index) =>
-                         <div key={index} className='list'>
+                         <div key={index} className={`list ${nav.active}`}>
                             <NavLink to={nav.link}>
                                 {nav.icon}
-                                <span className='nav-item'>{nav.name}
+                                <span className='nav-name'>{nav.name}
                                 </span>
                             </NavLink>
                          </div>
@@ -67,7 +74,7 @@ const Sidenavigation = ()=> {
 
                <div className='list'>
                             <a href="#">
-                                <MdLogout/>
+                                <MdLogout className='icon'/>
                                 <span className='nav-item'> Logout
                                 </span>
                             </a>
@@ -75,10 +82,10 @@ const Sidenavigation = ()=> {
             </div>
 
             <div className='avatar'>
-                <div><img src={sakaja} alt="avatar"/></div>
+                <div className='avatarimg'><img src={avatar} alt="avatar"/></div>
                 <div className='text'>
-                    <p>Sakaja</p>
-                    <p>sakaja@gmail.com</p>
+                    <p>Ndinda</p>
+                    <p>ndinda@gmail.com</p>
                 </div>
             </div>
         </nav>

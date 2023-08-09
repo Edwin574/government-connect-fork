@@ -1,9 +1,11 @@
 .table-containter{
-    margin:50px;
+    margin:2em;
     /* background-color: red; */
-    /* padding: 100px; */
+    padding: 2%;
     border-radius: 50px;
     text-align: 'center';
+    box-shadow: 1px 1px 8px black;
+    /* color: red; */
 }
 .column-label{
     font-weight: 'bolder';

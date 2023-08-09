@@ -48,3 +48,8 @@
     border-radius: 20px;
     /* background: red; */
 }
+.TopImg img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}

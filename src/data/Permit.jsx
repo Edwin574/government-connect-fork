@@ -64,17 +64,63 @@ const PermitData = [
     PaymentStatus: "paid",
   },
 ];
+const header = "column-label";
+
 const columns = [
-  { field: "id", headerName: "ID", width: 50 },
-  { field: "BusinessName", headerName: "Business Name", width: 150 },
-  { field: "Location", headerName: "Location", width: 100 },
+  {
+    field: "id",
+    headerName: "ID",
+    width: 50,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "BusinessName",
+    headerName: "Business Name",
+    width: 150,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "Location",
+    headerName: "Location",
+    width: 100,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
   {
     field: "DateOfRegistration",
     headerName: "Date of registration",
     width: 100,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
   },
-  { field: "TypeOfBusiness", headerName: "Type of Business", width: 120 },
-  { field: "PaymentStatus", headerName: "Payment Status", width: 120 },
+  {
+    field: "TypeOfBusiness",
+    headerName: "Type of Business",
+    width: 120,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "PaymentStatus",
+    headerName: "Payment Status",
+    width: 120,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
 ];
 
 export { PermitData, columns };
