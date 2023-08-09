@@ -35,7 +35,12 @@ function Linechart() {
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "time" }]}
         series={[
-          { dataKey: "payment", label: "Time", valueFormatter, color: "green" },
+          {
+            dataKey: "payment",
+            label: "Time",
+            valueFormatter,
+            color: "rgba(12,19,79,1)",
+          },
         ]}
         {...chartSetting}
       />
