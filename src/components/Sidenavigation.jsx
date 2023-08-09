@@ -1,6 +1,7 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/components/sidenav.css";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo.jpeg";
 import avatar from "../assets/avatar.png";
 import { BiSolidDashboard, BiSolidReport } from "react-icons/bi";
 import { AiOutlineCar } from "react-icons/ai";
@@ -11,11 +12,19 @@ import {
   MdPayments,
   MdLogout,
 } from "react-icons/md";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Sidenavigation = ({logout}) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const activeRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const activeNavItem = navs.findIndex(nav => nav.link === location.pathname.substr(1));
+    if (activeNavItem !== -1) {
+      setActiveIndex(activeNavItem);
+    }
+  }, [location]);
   const navs = [
     {
       name: "Dashboard",
@@ -48,7 +57,7 @@ const Sidenavigation = ({logout}) => {
       link: "public-spaces",
     },
     {
-      name: "Make Payments",
+      name: "Payments",
       icon: <MdPayments className="icon" />,
       link: "payments",
     },
@@ -110,5 +119,7 @@ const Sidenavigation = ({logout}) => {
     </div>
   );
 };
+
+Sidenavigation.propTypes = {logout: PropTypes.func.isRequired};
 
 export default Sidenavigation;
