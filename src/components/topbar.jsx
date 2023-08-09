@@ -2,7 +2,7 @@ import {} from 'react'
 import '../styles/components/topbar.css';
 import {AiOutlineSearch} from 'react-icons/ai'
 import {GrNotification} from 'react-icons/gr'
-import sakaja from '../assets/sakaja.png'
+import avatar from '../assets/avatar.png'
 
 const TopBar = () => {
   return (
@@ -17,7 +17,7 @@ const TopBar = () => {
       </div>
       <div className="notification">
         <div className="notificationBell"><GrNotification /></div>
-        <div><img src={sakaja} alt="profile" /></div>
+        <div className='TopImg'><img src={avatar} alt="profile" /></div>
       </div>
     </div>
   )
