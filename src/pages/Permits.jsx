@@ -8,8 +8,10 @@ import ShowCards from "../components/cards";
 import AddBusinessTwoToneIcon from "@mui/icons-material/AddBusinessTwoTone";
 import Table from "../components/table";
 import Barchart from "../charts/Barchart";
-import { ParkData } from "../data/park";
-import { columns } from "../data/park";
+// import { ParkData } from "../data/park";
+// import { columns } from "../data/park";
+import { PermitData } from "../data/Permit";
+import { columns } from "../data/Permit";
 import { useSelector } from "react-redux";
 
 
