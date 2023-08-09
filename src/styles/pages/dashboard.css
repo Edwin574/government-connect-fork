@@ -1,3 +1,4 @@
+
 .mainCards{
     /* border: 1px solid maroon; */
     display: flex;
@@ -6,8 +7,9 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 5px;
-}
-.chart{
-    display: flex;
-    justify-content: center;
+
+.chart {
+  display: flex;
+  justify-content: center;
+
 }
