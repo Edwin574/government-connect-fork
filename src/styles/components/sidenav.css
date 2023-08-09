@@ -20,6 +20,7 @@ nav{
     animation: float 6s ease-in-out infinite; animation: float 6s ease-in-out infinite;
     width: 60px;
     height: 60px;
+    border-radius: 50%;
 }
 @keyframes float {
   0% {
@@ -124,10 +125,10 @@ nav{
     box-shadow: 0 5px 15px 0px rgba(12, 19, 79, 0.1);
     /* border-radius: 50px; */
 }
-.avatarimg{
+.avatarImg{
     display: flex;
 }
-.avatarimg img{
+.avatarImg img{
     width: 40px;
     height: 40px;
     object-fit: cover;

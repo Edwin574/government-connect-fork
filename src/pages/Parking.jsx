@@ -37,7 +37,7 @@ const Parking = () => {
         />
       </div>
 
-      <div className="table-container">
+      <div className="table-containter">
 
         <Table cols={columns} data={ParkData} />
       </div>
