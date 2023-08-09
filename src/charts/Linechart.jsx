@@ -1,5 +1,4 @@
-import { LineChart } from "@mui/x-charts";
-import { axisClasses } from "@mui/x-charts";
+import { LineChart, axisClasses } from "@mui/x-charts";
 import "../styles/components/Chart.css";
 
 function Linechart() {
@@ -16,21 +15,14 @@ function Linechart() {
   const chartSetting = {
     yAxis: [
       {
-        label: "Revenue",
+        label: "Revenue in KShs",
       },
     ],
     width: 800,
     height: 300,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
-        //innerWidth: "-200px",
         transform: "rotate(-90deg) translate(0px, -20px)",
-      },
-      Line: {
-        fill: "green",
-        "&:hover": {
-          fill: "#1976D2",
-        },
       },
     },
   };

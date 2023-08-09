@@ -1,10 +1,11 @@
 import { BarChart, axisClasses } from "@mui/x-charts";
+import "../styles/components/Chart.css";
 
 function Barchart() {
   const chartSetting = {
     yAxis: [
       {
-        label: "revenue",
+        label: "Revenue in KShs",
       },
     ],
     width: 700,
@@ -71,7 +72,7 @@ function Barchart() {
   const valueFormatter = (value) => `${value}`;
 
   return (
-    <div className="revenue__chart">
+    <div className="barChart">
       <BarChart
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "month" }]}
