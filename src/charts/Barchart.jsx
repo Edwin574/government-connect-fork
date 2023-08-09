@@ -7,8 +7,8 @@ function Barchart() {
         label: "revenue",
       },
     ],
-    width: 500,
-    height: 300,
+    width: 700,
+    height: 400,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
         fill: "green",
@@ -68,7 +68,7 @@ function Barchart() {
     },
   ];
 
-  const valueFormatter = (value) => `${value}mm`;
+  const valueFormatter = (value) => `${value}`;
 
   return (
     <div className="revenue__chart">

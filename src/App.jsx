@@ -1,28 +1,44 @@
-import {} from "react";
+
+import { useState } from "react";
 import "./App.css";
-import { createTheme, ThemeProvider } from "@mui/material";
+
 import Sidenavigation from "./components/Sidenavigation";
-import Topbar from "./components/Topbar";
+import TopBar from "./components/topbar";
+import ContentContainer from "./pages/ContentContainer";
 import { Outlet } from "react-router-dom";
+import Login from "./pages/Login";
+
+
 
 function App() {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: "#00ff00",
-      },
-    },
-  });
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const handleButtonClick = () =>{
+    setIsLoggedIn(true)
+  }
   return (
-    <ThemeProvider theme={theme}>
+    <>
       <div className="app">
-        <Sidenavigation />
-        {/*<Topbar />*/}
+        {
+          isLoggedIn? 
+          <div>
+            <Sidenavigation/>
+            <TopBar/>
+            <ContentContainer/>
+          </div>
+        :
+        <Login clickButton={handleButtonClick}/>
+
+        }
+        
+        
+        {/* <Dashboard/> */}
         <Outlet />
       </div>
-    </ThemeProvider>
+    </>
+    
   );
+
 }
 
 export default App;
