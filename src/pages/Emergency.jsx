@@ -28,27 +28,6 @@ const Emergency = () => {
 
       <div className='table-containter'>
         <Table cols={columns} data={EmergencyData}/>
-
-        <ShowCards
-          icon={<LocalHospitalIcon />}
-          name="Emergency Services"
-          numbers="300"
-        />
-        <ShowCards
-          icon={<LocalParkingIcon />}
-          name="Solved Emergencies"
-          numbers="200"
-        />
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Pending Emergency"
-          numbers="20"
-        />
-      </div>
-
-      <div>
-        <Table cols={columns} data={EmergencyData} />
-
       </div>
 
       <div className="chart">
