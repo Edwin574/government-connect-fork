@@ -6,6 +6,7 @@ import Table from "../components/table";
 import Barchart from "../charts/Barchart";
 import { PaymentData } from "../data/payment";
 import { columns } from "../data/payment";
+import { useSelector } from "react-redux";
 
 const Payments = () => {
   const payment = useSelector((state) => state.payment.payment);

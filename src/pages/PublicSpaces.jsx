@@ -7,9 +7,10 @@ import Table from "../components/table";
 import Barchart from "../charts/Barchart";
 import { SpacesData } from "../data/Spaces";
 import { columns } from "../data/Spaces";
+import { useSelector } from "react-redux";
 
 const PublicSpaces = () => {
-  const publicSpaces = useSelector((state) => state.publicSpaces.publicSpaces);
+  const publicSpaces = useSelector((state) => state.publicSpace.publicSpace);
 
   return (
     <div>

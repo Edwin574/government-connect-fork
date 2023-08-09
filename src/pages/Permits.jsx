@@ -7,6 +7,7 @@ import Table from "../components/table";
 import Barchart from "../charts/Barchart";
 import { ParkData } from "../data/park";
 import { columns } from "../data/park";
+import { useSelector } from "react-redux";
 
 const Permits = () => {
   const permit = useSelector((state) => state.permit.permit);

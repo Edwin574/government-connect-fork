@@ -7,6 +7,7 @@ import Table from "../components/table";
 import Barchart from "../charts/Barchart";
 import { IncidenceData } from "../data/Incidences";
 import { columns } from "../data/Incidences";
+import { useSelector } from "react-redux";
 
 const ReportIncidence = () => {
   const incidence = useSelector((state) => state.incidence.incidence);

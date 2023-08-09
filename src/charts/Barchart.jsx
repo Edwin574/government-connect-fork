@@ -12,7 +12,6 @@ function Barchart() {
     height: 400,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
-        fill: "green",
         transform: "rotate(-90deg) translate(0px, -20px)",
       },
     },
@@ -76,7 +75,14 @@ function Barchart() {
       <BarChart
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "month" }]}
-        series={[{ dataKey: "revenue", label: "month", valueFormatter }]}
+        series={[
+          {
+            dataKey: "revenue",
+            label: "Month",
+            valueFormatter,
+            color: "green",
+          },
+        ]}
         {...chartSetting}
       />
     </div>

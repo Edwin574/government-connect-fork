@@ -16,7 +16,7 @@ const Dashboard = () => {
   const parking = useSelector((state) => state.parking.parking);
   const payment = useSelector((state) => state.payment.payment);
   const permit = useSelector((state) => state.permit.permit);
-  const publicSpaces = useSelector((state) => state.publicSpaces.publicSpaces);
+  const publicSpaces = useSelector((state) => state.publicSpace.publicSpace);
 
   return (
     <div className="dashContainer">

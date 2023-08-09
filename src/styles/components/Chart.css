@@ -2,7 +2,10 @@
   padding: 50px !important;
 }
 
-.barChart > *,
-.lineChart > * {
+.barChart > * {
   width: 70vw !important;
+}
+
+.css-q3wnbe-MuiResponsiveChart-container {
+  width: 100vw !important;
 }

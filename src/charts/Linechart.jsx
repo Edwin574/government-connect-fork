@@ -22,7 +22,7 @@ function Linechart() {
     height: 300,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
-        transform: "rotate(-90deg) translate(0px, -20px)",
+        transform: "rotate(-90deg) translate(0px, -40px)",
       },
     },
   };
@@ -32,10 +32,11 @@ function Linechart() {
   return (
     <div className="linechart">
       <LineChart
-        className="chart"
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "time" }]}
-        series={[{ dataKey: "payment", label: "Time", valueFormatter }]}
+        series={[
+          { dataKey: "payment", label: "Time", valueFormatter, color: "green" },
+        ]}
         {...chartSetting}
       />
     </div>
