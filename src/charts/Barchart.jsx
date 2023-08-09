@@ -1,6 +1,6 @@
 import { BarChart, axisClasses } from "@mui/x-charts";
 
-function RevenueChart() {
+function Barchart() {
   const chartSetting = {
     yAxis: [
       {
@@ -11,6 +11,7 @@ function RevenueChart() {
     height: 300,
     sx: {
       [`.${axisClasses.left} .${axisClasses.label}`]: {
+        fill: "green",
         transform: "rotate(-90deg) translate(0px, -20px)",
       },
     },
@@ -72,7 +73,6 @@ function RevenueChart() {
   return (
     <div className="revenue__chart">
       <BarChart
-        sx={{ backgroundColor: "green" }}
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "month" }]}
         series={[{ dataKey: "revenue", label: "month", valueFormatter }]}
@@ -82,4 +82,4 @@ function RevenueChart() {
   );
 }
 
-export default RevenueChart;
+export default Barchart;

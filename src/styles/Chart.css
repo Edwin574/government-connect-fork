@@ -1,0 +1,11 @@
+.linechart {
+  padding: 50px;
+}
+
+.css-q3wnbe-MuiResponsiveChart-container {
+  width: 70vw !important;
+}
+
+.MuiChartsAxis-root {
+  width: 20px !important;
+}

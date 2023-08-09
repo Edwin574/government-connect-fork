@@ -1,4 +1,4 @@
-import RevenueChart from "../charts/RevenueChart";
+import Linechart from "../charts/LineChart";
 
 const Dashboard = () => {
   return (
@@ -29,7 +29,7 @@ const Dashboard = () => {
           <span>Payments Made</span>
         </div>
       </div>
-      <RevenueChart />
+      <Linechart />
     </div>
   );
 };
