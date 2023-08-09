@@ -80,7 +80,7 @@ function Barchart() {
             dataKey: "revenue",
             label: "Month",
             valueFormatter,
-            color: "green",
+            color: "rgba(12,19,79,1)",
           },
         ]}
         {...chartSetting}
