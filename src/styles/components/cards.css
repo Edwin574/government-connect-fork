@@ -1,26 +1,14 @@
-.cards {
-    border: 5px solid;
-    width: 300px;
-    margin: 10px auto;
-    border-color: yellow;
-}
 
-.card {
-    border: 2px dashed yellow;
-    border-top: none;
-    border-bottom: none;
-    padding: 10px;
-    cursor: pointer;
-    color: yellow;
-    background-color: green;
-}
+.normal{
+    background: linear-gradient(90deg, rgba(12,19,79,1) 0%, rgba(92,70,156,1) 46%, rgba(29,38,125,1) 100%);
 
-.cardTop {
-    display: flex;
 }
-
-.cardBottom {
-    display: flex;
+.light{
+    background: linear-gradient(90deg, rgba(122,11,192,1) 0%, rgba(212,173,252,1) 44%, rgba(92,70,156,1) 100%);
+}
+.card-name{
+    color: white;
+    /* font-weight:600; */
 }
 
 .cardIcon {

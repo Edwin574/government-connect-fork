@@ -1,3 +1,6 @@
+
+import "../styles/components/tables.css"
+
 import "../styles/pages/dashboard.css";
 import ShowCards from "../components/cards";
 // import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
@@ -9,31 +12,22 @@ import { ParkData } from "../data/park";
 import { columns } from "../data/park";
 import { useSelector } from "react-redux";
 
+
 const Permits = () => {
   const permit = useSelector((state) => state.permit.permit);
 
   return (
     <div>
       <div className="mainCards">
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Permit Requests"
-          numbers="2330"
-        />
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Granted Permits"
-          numbers="1570"
-        />
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Pending Permits"
-          numbers="600"
-        />
+
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Permit Requests" numbers="2330" bg='light' percent={100}/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Granted Permits" numbers="1570" bg='normal' percent={56}/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Pending Permits" numbers="600" bg='light' percent={44}/>
       </div>
 
-      <div>
-        <Table cols={columns} data={ParkData} />
+      <div className='table-containter'>
+        <Table cols={columns} data={PermitData}/>
+
       </div>
 
       <div className="chart">

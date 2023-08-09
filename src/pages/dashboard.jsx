@@ -22,28 +22,14 @@ const Dashboard = () => {
     <div className="dashContainer">
       {/* cards */}
       <div className="mainCards">
-        <ShowCards
-          icon={<LocalHospitalIcon />}
-          name="Emergency Services"
-          numbers="3000"
-        />
-        <ShowCards icon={<LocalParkingIcon />} name="Parking" numbers="2000" />
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Business Parking"
-          numbers="300"
-        />
-        <ShowCards
-          icon={<SummarizeIcon />}
-          name="Reported Incidences"
-          numbers="400"
-        />
-        <ShowCards
-          icon={<OtherHousesIcon />}
-          name="Public Spaces"
-          numbers="500"
-        />
-        <ShowCards icon={<PaidIcon />} name="Payments Made" numbers="1000" />
+
+      <ShowCards icon={<LocalHospitalIcon/> } name="Emergency Services" numbers="3000" bg='normal' percent={100}/>
+      <ShowCards icon={<LocalParkingIcon/> } name="Parking services" numbers="2000" bg='light' percent={100}/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> } name="Business Parking" numbers="300" bg='normal' percent={100}/>
+      <ShowCards icon={<SummarizeIcon/> } name="Reported Incidences" numbers="400" bg='light' percent={100}/>
+      <ShowCards icon={<OtherHousesIcon/> } name="Available Public Spaces" numbers="500" bg='normal' percent={100}/>
+      <ShowCards icon={<PaidIcon/> } name="Payments Made" numbers="1000" bg='light' percent={100}/>
+
       </div>
 
       {/* chart */}
