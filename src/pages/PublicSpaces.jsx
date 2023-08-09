@@ -1,8 +1,30 @@
-import React from 'react'
+import '../styles/pages/dashboard.css'
+import ShowCards from '../components/cards'
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import LocalParkingIcon from '@mui/icons-material/LocalParking';
+import AddBusinessTwoToneIcon from '@mui/icons-material/AddBusinessTwoTone';
+import Table from '../components/table';
+import RevenueChart from '../charts/RevenueChart';
+import { SpacesData } from "../data/Spaces";
+import { columns } from "../data/Spaces";
 
 const PublicSpaces = () => {
   return (
-    <div>PublicSpaces</div>
+    <div>
+      <div className="mainCards">
+      <ShowCards icon={<LocalHospitalIcon/> }name="Emergency Services" numbers="200"/>
+      <ShowCards icon={<LocalParkingIcon/> }name="Emergency Services" numbers="300"/>
+      <ShowCards icon={<AddBusinessTwoToneIcon/> }name="Emergency Services" numbers="30"/>
+      </div>
+
+      <div>
+        <Table cols={columns} data={SpacesData}/>
+      </div>
+
+      <div className="chart">
+        <RevenueChart/>
+      </div>
+    </div>
   )
 }
 

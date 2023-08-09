@@ -11,31 +11,38 @@ const Sidenavigation = ()=> {
     const navs = [
         {
             name: 'Dashboard',
-            icon: <BiSolidDashboard/>
+            icon: <BiSolidDashboard/>,
+            link: "/",
         },
         {
             name: 'Emergency',
-            icon: <MdEmergencyShare/>
+            icon: <MdEmergencyShare/>,
+            link: "emergency",
         },
         {
             name: 'Parking',
-            icon: <AiOutlineCar/>
+            icon: <AiOutlineCar/>,
+            link: "parking",
         },
         {
             name: 'Business Permits',
-            icon: <MdBusinessCenter/>
+            icon: <MdBusinessCenter/>,
+            link: "business-permits",
         },
         {
             name: 'Reporting incidences',
-            icon: <BiSolidReport/>
+            icon: <BiSolidReport/>,
+            link: "reporting-incidences",
         },
         {
             name: 'Public Spaces',
-            icon: <MdWorkspacesFilled/>
+            icon: <MdWorkspacesFilled/>,
+            link: "public-spaces",
         },
         {
             name: 'Make Payments',
-            icon: <MdPayments/>
+            icon: <MdPayments/>,
+            link: "payments",
         },
     ]
   return (
@@ -47,7 +54,7 @@ const Sidenavigation = ()=> {
                 {
                     navs.map((nav, index) =>
                          <div key={index} className='list'>
-                            <NavLink to="#">
+                            <NavLink to={nav.link}>
                                 {nav.icon}
                                 <span className='nav-item'>{nav.name}
                                 </span>

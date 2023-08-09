@@ -1,21 +1,41 @@
 
-import {} from "react";
+import { useState } from "react";
 import "./App.css";
-// import { createTheme, ThemeProvider } from "@mui/material";
 import Sidenavigation from "./components/Sidenavigation";
-// import Topbar from "./components/Topbar";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import TopBar from "./components/topbar";
+import ContentContainer from "./pages/ContentContainer";
 import { Outlet } from "react-router-dom";
+import Login from "./pages/Login";
+
 
 
 function App() {
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleButtonClick = () =>{
+    setIsLoggedIn(true)
+  }
   return (
-    <div className="app">
-      <Sidenavigation />
-      
-      {/* <TopBar/> */}
-      {/* <Outlet /> */}
-    </div>
+    <>
+      <div className="app">
+        {
+          isLoggedIn? 
+          <div>
+            <Sidenavigation/>
+            <TopBar/>
+            <ContentContainer/>
+          </div>
+        :
+        <Login clickButton={handleButtonClick}/>
+
+        }
+        
+        
+        {/* <Dashboard/> */}
+        <Outlet />
+      </div>
+    </>
   );
 
 }

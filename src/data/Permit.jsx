@@ -1,4 +1,4 @@
-const ParkData = [
+const PermitData = [
   {
     id: 1,
     BusinessName: "KenShoes",
@@ -77,4 +77,4 @@ const columns = [
   { field: "PaymentStatus", headerName: "Payment Status", width: 120 },
 ];
 
-export { ParkData, columns };
+export { PermitData, columns };
