@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import PropTypes from "prop-types";
 import "../styles/components/sidenav.css";
 import logo from "../assets/logo.png";
 import avatar from "../assets/avatar.png";
@@ -110,5 +111,7 @@ const Sidenavigation = ({logout}) => {
     </div>
   );
 };
+
+Sidenavigation.propTypes = {logout: PropTypes.func.isRequired};
 
 export default Sidenavigation;
