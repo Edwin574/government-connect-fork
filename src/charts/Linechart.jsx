@@ -1,6 +1,6 @@
 import { LineChart } from "@mui/x-charts";
 import { axisClasses } from "@mui/x-charts";
-import "../styles/Chart.css";
+import "../styles/components/Chart.css";
 
 function Linechart() {
   const dataset = [];
@@ -40,6 +40,7 @@ function Linechart() {
   return (
     <div className="linechart">
       <LineChart
+        className="chart"
         dataset={dataset}
         xAxis={[{ scaleType: "band", dataKey: "time" }]}
         series={[{ dataKey: "payment", label: "Time", valueFormatter }]}
