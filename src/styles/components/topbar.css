@@ -1,6 +1,6 @@
 .TopBar{
     margin-left: 200px;
-    background-color: #fff;
+    background-color: #372f790f;
     height: 70px;
     display: flex;
     justify-content: space-between;
@@ -11,6 +11,9 @@
 }
 .TopBarIntro .first{
     font-weight: bold;
+}
+.TopBarIntro .second{
+    font-size: 10;
 }
 .searchBar {
     display: flex;
