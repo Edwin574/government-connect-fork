@@ -15,7 +15,7 @@ border-bottom: none;
 padding:10px;
 cursor: pointer;
 color:yellow;
-position: ;
+/* position: ; */
 background-color: green;
 }
 
@@ -40,7 +40,7 @@ color:aliceblue;
 
 .cardName:hover{
   color:red;
-
+}
 .app {
   display: flex;
 
@@ -50,6 +50,3 @@ overflow-x: hidden;
 
 }
 
-.cardNumber{
-
-}
