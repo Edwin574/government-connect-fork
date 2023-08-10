@@ -1,3 +1,4 @@
+
 .mainForm{
   height: 100vh;
   display: flex;
@@ -6,11 +7,13 @@
 .form_main {
     width: 500px;
     display: flex; 
+
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 255, 255);
     padding: 30px 30px 30px 30px;
+
     box-shadow: 0px 0px 40px rgba(12,19,79,0.3);
     position: relative;
     overflow: hidden;
@@ -31,12 +34,15 @@
       transform: translatey(0px);
     }
   }
+
   .form_main::before {
     position: absolute;
     content: "";
     width: 300px;
     height: 300px;
+
     background-color: rgb(12,19,79);
+
     transform: rotate(45deg);
     left: -180px;
     bottom: 30px;
@@ -74,7 +80,9 @@
     border: none;
     border-bottom: 2px solid rgb(173, 173, 173);
     margin: 10px 0;
+
     color: #000;
+
     font-size: .8em;
     font-weight: 500;
     box-sizing: border-box;
@@ -83,11 +91,13 @@
   
   .inputField:focus {
     outline: none;
+
     border-bottom: 2px solid rgb(12,19,79);
   }
   
   .inputField::placeholder {
     color: #000;
+
     font-size: 1em;
     font-weight: 500;
   }
@@ -97,26 +107,32 @@
     position: relative;
     width: 100%;
     border: none;
+
     background-color: rgb(12,19,79);
     height: 30px;
     color: #fff;
+
     font-size: .8em;
     font-weight: 500;
     letter-spacing: 1px;
     margin: 10px;
     cursor: pointer;
+
     border-radius: 20px;
   }
   
   #button:hover {
     background-color: rgb(92,70,156);
+
   }
   
   .forgotLink {
     z-index: 2;
     font-size: .7em;
     font-weight: 500;
+
     color: rgb(12,19,79);
+
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 20px;

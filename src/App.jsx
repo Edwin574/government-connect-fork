@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 
 
 
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -21,6 +22,7 @@ function App() {
   }
   return (
     <>
+
       <div className="app">
         {
           isLoggedIn? 
@@ -38,6 +40,7 @@ function App() {
         {/* <Dashboard/> */}
         <Outlet />
       </div>
+
     </>
     
   );

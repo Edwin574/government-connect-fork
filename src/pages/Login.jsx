@@ -1,9 +1,12 @@
+
 import "../styles/pages/login.css";
 import PropTypes from "prop-types";
 import logo from "../assets/logo.jpeg";
 
+
 const Login = ({ clickButton }) => {
   return (
+
     <div className="mainForm">
       <form action="" className="form_main">
         <h2>Government Connect</h2>
@@ -26,7 +29,6 @@ const Login = ({ clickButton }) => {
             placeholder="Username"
           />
         </div>
-
         <div className="inputContainer">
           <svg
             className="inputIcon"
