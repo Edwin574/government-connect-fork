@@ -1,0 +1,27 @@
+
+.normal{
+    background: linear-gradient(90deg, rgba(12,19,79,1) 0%, rgba(92,70,156,1) 46%, rgba(29,38,125,1) 100%);
+
+}
+.light{
+    background: linear-gradient(90deg, rgba(122,11,192,1) 0%, rgba(212,173,252,1) 44%, rgba(92,70,156,1) 100%);
+}
+.card-name{
+    color: white;
+    /* font-weight:600; */
+}
+
+.cardIcon {
+    font-size: 10px;
+}
+
+.cardName {
+    justify-content: baseline;
+    font-size: 10px;
+    color: aliceblue;
+
+}
+
+.cardName:hover {
+    color: red;
+}
