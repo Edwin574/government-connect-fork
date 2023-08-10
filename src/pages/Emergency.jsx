@@ -7,6 +7,7 @@ import Table from "../components/table";
 import Linechart from "../charts/Linechart";
 import { EmergencyData } from "../data/emergency";
 import { columns } from "../data/emergency";
+import axios from "axios";
 
 import "../styles/components/tables.css";
 
@@ -17,14 +18,38 @@ import { fetchEmergency } from "../redux/reduxSlice/emergencySlice";
 const Emergency = () => {
   const emergency = useSelector((state) => state.emergency.emergency);
   const dispatch = useDispatch();
-  //const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     dispatch(fetchEmergency());
     //setData(emergency);
     //console.log(emergency);
-  }, [dispatch]);
-  console.log(emergency);
+  }, [dispatch]);*/
+  //console.log(emergency);
+  useEffect(() => {
+    axios
+      .get("http://gvmt.oderowrites.com/Api.php/emergency/list")
+      .then((res) => {
+        setData(res.data.users);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  //setData(data.map(data => data.type === "1"))
+
+  data.map((data) => {
+    if (data.type === "1") {
+      return (data.type = "Ambulance");
+    } else if (data.type === "2") {
+      return (data.type = "Fire Fighter");
+    } else if (data.type === "3") {
+      return (data.type = "Police Officer");
+    } /*else {
+      return (data.type = "Other");
+    }*/
+  });
 
   return (
     <div>
@@ -53,7 +78,7 @@ const Emergency = () => {
       </div>
 
       <div className="table-containter">
-        <Table cols={columns} data={emergency} />
+        <Table cols={columns} data={data} />
       </div>
 
       <div className="chart">

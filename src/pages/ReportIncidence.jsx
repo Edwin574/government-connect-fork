@@ -16,9 +16,10 @@ const ReportIncidence = () => {
   const incidence = useSelector((state) => state.incidence.incidence);
   const dispatch = useDispatch();
 
-  /*useEffect(() => {
-    dispatch(fetchIncidence())
-  }, [incidence])*/
+  useEffect(() => {
+    dispatch(fetchIncidence());
+  }, [dispatch]);
+  console.log(incidence);
 
   return (
     <div>
@@ -47,7 +48,7 @@ const ReportIncidence = () => {
       </div>
 
       <div className="table-containter">
-        <Table cols={columns} data={IncidenceData} />
+        <Table cols={columns} data={incidence} />
       </div>
 
       <div className="chart">

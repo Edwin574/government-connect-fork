@@ -68,7 +68,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Type",
+    field: "type",
     headerName: "Type",
     width: 150,
     flex: 1,
@@ -77,7 +77,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Location",
+    field: "location",
     headerName: "Location",
     width: 100,
     flex: 1,
@@ -86,7 +86,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Contact",
+    field: "phone",
     headerName: "Contact",
     width: 200,
     flex: 1,
@@ -95,7 +95,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Date",
+    field: "date",
     headerName: "Date",
     width: 100,
     flex: 1,
@@ -104,8 +104,17 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Time",
-    headerName: "Time reported",
+    field: "details",
+    headerName: "Details",
+    width: 120,
+    flex: 1,
+    align: "center",
+    headerAlign: "center",
+    headerClassName: header,
+  },
+  {
+    field: "status",
+    headerName: "Status",
     width: 120,
     flex: 1,
     align: "center",

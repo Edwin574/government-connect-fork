@@ -33,9 +33,9 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(fetchEmergency());
   }, [dispatch]);
-  /*useEffect(() => {
-    dispatch(fetchIncidence())
-  }, [dispatch])*/
+  useEffect(() => {
+    dispatch(fetchIncidence());
+  }, [dispatch]);
   /*useEffect(() => {
     dispatch(fetchParking())
   }, [dispatch])*/
