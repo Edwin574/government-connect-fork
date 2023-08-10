@@ -11,7 +11,7 @@ const fetchEmergency = createAsyncThunk(
   "emergency/fetchEmergency",
   async () => {
     const response = await axios.get(
-      "http://gvmt.oderowrites.com/Api.php/emergency/list"
+      "https://gvmt.oderowrites.com/Api.php/emergency/list"
     );
     //console.log(response.data.users);
     let data = response.data.users;

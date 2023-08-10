@@ -39,7 +39,7 @@ const Emergency = () => {
   //console.log(emergency);
   useEffect(() => {
     axios
-      .get("http://gvmt.oderowrites.com/Api.php/emergency/list")
+      .get("https://gvmt.oderowrites.com/Api.php/emergency/list")
       .then((res) => {
         setData(res.data.users);
       })
