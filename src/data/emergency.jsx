@@ -75,7 +75,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Phone",
+    field: "phone",
     headerName: "Phone",
     width: 150,
     flex: 1,
@@ -84,7 +84,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Location",
+    field: "location",
     headerName: "Location",
     width: 100,
     flex: 1,
@@ -93,7 +93,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "EmergencyType",
+    field: "type",
     headerName: "Emergency Type",
     width: 200,
     align: "center",
@@ -102,7 +102,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Date",
+    field: "date",
     headerName: "Date",
     width: 100,
     flex: 1,
@@ -110,24 +110,24 @@ const columns = [
     headerAlign: "center",
     headerClassName: header,
   },
-  {
-    field: "Time",
-    headerName: "Time reported",
-    width: 120,
-    flex: 1,
-    align: "center",
-    headerAlign: "center",
-    headerClassName: header,
-  },
-  {
-    field: "Status",
-    headerName: "Status",
-    width: 120,
-    flex: 1,
-    align: "center",
-    headerAlign: "center",
-    headerClassName: header,
-  },
+  //{
+  //  field: "Time",
+  //  headerName: "Time reported",
+  //  width: 120,
+  //  flex: 1,
+  //  align: "center",
+  //  headerAlign: "center",
+  //  headerClassName: header,
+  //},
+  //{
+  //  field: "Status",
+  //  headerName: "Status",
+  //  width: 120,
+  //  flex: 1,
+  //  align: "center",
+  //  headerAlign: "center",
+  //  headerClassName: header,
+  //},
 ];
 
 export { EmergencyData, columns };

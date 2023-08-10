@@ -1,5 +1,5 @@
 import "../styles/pages/login.css";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import logo from "../assets/logo.jpeg";
 
 const Login = ({ clickButton }) => {
@@ -57,5 +57,5 @@ const Login = ({ clickButton }) => {
   );
 };
 
-Login.propTypes = {clickButton: PropTypes.func.isRequired};
+Login.propTypes = { clickButton: PropTypes.func.isRequired };
 export default Login;
