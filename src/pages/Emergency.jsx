@@ -7,30 +7,17 @@ import Table from "../components/table";
 import Linechart from "../charts/Linechart";
 import { EmergencyData } from "../data/emergency";
 import { columns } from "../data/emergency";
-<<<<<<< HEAD
-<<<<<<< HEAD
 import axios from "axios";
-import "../styles/components/tables.css";
-
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-=======
-=======
-import axios from "axios";
->>>>>>> 9c877470a6bb4d57b0c0108f3845d32d6417ddd8
-
 import "../styles/components/tables.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { fetchEmergency } from "../redux/reduxSlice/emergencySlice";
->>>>>>> 54383ccedbcd8a8972f9a781a2b227ffa4a6f60c
 
 const Emergency = () => {
   const emergency = useSelector((state) => state.emergency.emergency);
   const dispatch = useDispatch();
-<<<<<<< HEAD
-<<<<<<< HEAD
+
   const [ emdata, setemData ] = useState([]);
   
   useEffect(() => {
@@ -42,11 +29,8 @@ const Emergency = () => {
       }).catch(err => console.log("could not fetch data", err))
   },[]);
   // console.log('emergencydata',emdata)
-=======
-=======
-  const [data, setData] = useState([]);
->>>>>>> 9c877470a6bb4d57b0c0108f3845d32d6417ddd8
 
+  const [data, setData] = useState([]);
   /*useEffect(() => {
     dispatch(fetchEmergency());
     //setData(emergency);
@@ -77,8 +61,6 @@ const Emergency = () => {
       return (data.type = "Other");
     }*/
   });
-
->>>>>>> 54383ccedbcd8a8972f9a781a2b227ffa4a6f60c
   return (
     <div>
     
