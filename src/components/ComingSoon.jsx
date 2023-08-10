@@ -1,20 +1,16 @@
 import "../styles/pages/dashboard.css";
+import '../styles/components/comingsoon.css'
 
 function ComingSoon() {
   return (
     <div>
       
       <div className="mainCards">
-        <h2 className="comingSoon">Coming soon</h2>
+        <div className="comingSoon">
+           <h3 data-text="Coming Soon..">Coming soon...</h3>
+        </div>
+       
        </div>
-    
-    <style>
-        {`
-        .comingSoon{
-            font-size: 40px;
-        }
-        `}
-    </style>
      </div>
   )
 }

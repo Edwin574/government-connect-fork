@@ -56,3 +56,26 @@
     height: 40px;
     object-fit: cover;
 }
+@media all and (max-width: 768px){
+    .TopBar{
+        margin-left: 40px;
+        z-index: 100;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .TopBarIntro{
+        padding-left: 10px;
+    }
+    .first, .second{
+        font-size: 12px;
+    }
+    .searchBar{
+        padding-left: 10px;
+    }
+    .searchBar input{
+        width: 200px;
+    }
+    .notification{
+        gap: 10px;
+    }
+}

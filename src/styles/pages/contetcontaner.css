@@ -4,3 +4,8 @@
     height: auto;
     /* border: 2px solid black; */
 }
+@media all and (max-width: 768px){
+    .contentContainer{
+        margin-left: 40px;
+    }
+}
