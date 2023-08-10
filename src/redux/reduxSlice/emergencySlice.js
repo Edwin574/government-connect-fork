@@ -13,8 +13,19 @@ const fetchEmergency = createAsyncThunk(
     const response = await axios.get(
       "http://gvmt.oderowrites.com/Api.php/emergency/list"
     );
-    console.log(response.data.users);
-    return response.data.users;
+    //console.log(response.data.users);
+    let data = response.data.users;
+    //if (data.type === "1") {
+    //  data.type = "Ambulance";
+    //} else if (data.type === "2") {
+    //  data.type = "Fire Fighter";
+    //} else if (data.type === "3") {
+    //  data.type = "Police Officer";
+    //} else {
+    //  data.type = "Other";
+    //}
+    console.log(data);
+    return data[0];
   }
 );
 
