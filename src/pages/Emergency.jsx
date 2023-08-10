@@ -4,18 +4,28 @@ import LocalHospitalIcon from "@mui/icons-material/LocalHospital";
 import LocalParkingIcon from "@mui/icons-material/LocalParking";
 import AddBusinessTwoToneIcon from "@mui/icons-material/AddBusinessTwoTone";
 import Table from "../components/table";
-import Barchart from "../charts/Barchart";
+import Linechart from "../charts/Linechart";
 import { EmergencyData } from "../data/emergency";
 import { columns } from "../data/emergency";
+<<<<<<< HEAD
 import axios from "axios";
 import "../styles/components/tables.css";
 
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+=======
+
+import "../styles/components/tables.css";
+
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { fetchEmergency } from "../redux/reduxSlice/emergencySlice";
+>>>>>>> 54383ccedbcd8a8972f9a781a2b227ffa4a6f60c
 
 const Emergency = () => {
   const emergency = useSelector((state) => state.emergency.emergency);
   const dispatch = useDispatch();
+<<<<<<< HEAD
   const [ emdata, setemData ] = useState([]);
   
   useEffect(() => {
@@ -27,6 +37,13 @@ const Emergency = () => {
       }).catch(err => console.log("could not fetch data", err))
   },[]);
   // console.log('emergencydata',emdata)
+=======
+
+  /*useEffect(() => {
+    dispatch(fetchEmergency())
+  }, [emergency])*/
+
+>>>>>>> 54383ccedbcd8a8972f9a781a2b227ffa4a6f60c
   return (
     <div>
     
@@ -59,7 +76,7 @@ const Emergency = () => {
       </div>
 
       <div className="chart">
-        <Barchart />
+        <Linechart />
       </div>
     </div>
   );
