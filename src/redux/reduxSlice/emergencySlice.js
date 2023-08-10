@@ -10,9 +10,22 @@ const initialState = {
 const fetchEmergency = createAsyncThunk(
   "emergency/fetchEmergency",
   async () => {
-    const response = await axios.get("http://127.0.0.1:8080/emergencies/read");
-    console.log(response.data);
-    return response.data;
+    const response = await axios.get(
+      "http://gvmt.oderowrites.com/Api.php/emergency/list"
+    );
+    //console.log(response.data.users);
+    let data = response.data.users;
+    //if (data.type === "1") {
+    //  data.type = "Ambulance";
+    //} else if (data.type === "2") {
+    //  data.type = "Fire Fighter";
+    //} else if (data.type === "3") {
+    //  data.type = "Police Officer";
+    //} else {
+    //  data.type = "Other";
+    //}
+    console.log(data);
+    return data[0];
   }
 );
 
@@ -24,9 +37,15 @@ const emergencySlice = createSlice({
       state.loading = true;
     });
     builder.addCase(fetchEmergency.fulfilled, (state, action) => {
-      state.loading = false;
-      state.emergency = action.payload;
-      state.error = "";
+      return {
+        ...state,
+        loading: false,
+        emergency: [...state.emergency, action.payload],
+        error: "",
+      };
+      //state.loading = false;
+      //state.emergency = action.payload;
+      //state.error = "";
     });
     builder.addCase(fetchEmergency.rejected, (state, action) => {
       state.loading = false;

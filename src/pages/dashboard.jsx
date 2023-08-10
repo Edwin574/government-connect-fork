@@ -5,17 +5,20 @@ import AddBusinessTwoToneIcon from "@mui/icons-material/AddBusinessTwoTone";
 import SummarizeIcon from "@mui/icons-material/Summarize";
 import OtherHousesIcon from "@mui/icons-material/OtherHouses";
 import PaidIcon from "@mui/icons-material/Paid";
+
 import "../styles/pages/dashboard.css";
 import Barchart from "../charts/Barchart";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import axios from "axios";
+
 import { fetchEmergency } from "../redux/reduxSlice/emergencySlice";
 import { fetchIncidence } from "../redux/reduxSlice/incidenceSlice";
 import { fetchParking } from "../redux/reduxSlice/parkingSlice";
 import { fetchPayment } from "../redux/reduxSlice/paymentSlice";
 import { fetchPermit } from "../redux/reduxSlice/permitSlice";
 import { fetchPublicSpace } from "../redux/reduxSlice/publicSpaceSlice";
-import axios from "axios";
 
 const Dashboard = () => {
   const emergency = useSelector((state) => state.emergency.emergency);
@@ -30,9 +33,9 @@ const Dashboard = () => {
   useEffect(() => {
     dispatch(fetchEmergency());
   }, [dispatch]);
-  /*useEffect(() => {
-    dispatch(fetchIncidence())
-  }, [dispatch])*/
+  useEffect(() => {
+    dispatch(fetchIncidence());
+  }, [dispatch]);
   /*useEffect(() => {
     dispatch(fetchParking())
   }, [dispatch])*/
