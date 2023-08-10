@@ -10,18 +10,25 @@ import Table from "../components/table";
 // import { columns } from "../data/park";
 import { PermitData } from "../data/Permit";
 import { columns } from "../data/Permit";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchPermit } from "../redux/reduxSlice/permitSlice";
+// import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+// import { fetchPermit } from "../redux/reduxSlice/permitSlice";
 import Linechart from "../charts/Linechart";
+import axios from "axios";
 
 const Permits = () => {
-  const permit = useSelector((state) => state.permit.permit);
-  const dispatch = useDispatch();
+  // const permit = useSelector((state) => state.permit.permit);
+  // const dispatch = useDispatch();
 
-  /*useEffect(() => {
-    dispatch(fetchPermit());
-  }, [permit]);*/
+  const [permitData, setPermitData] = useState([]);
+
+  useEffect(() => {
+    axios.get("http://gvmt.oderowrites.com/Api.php/incidence/list")
+    .then((res)=>{
+      setPermitData(res.data.users);
+    })
+    .catch((err)=> console.log("Couldnt load data ", err));
+  }, []);
 
   return (
     <div>
@@ -50,7 +57,7 @@ const Permits = () => {
       </div>
 
       <div className="table-containter">
-        <Table cols={columns} data={PermitData} />
+        <Table cols={columns} data={permitData} />
       </div>
 
       <div className="chart">

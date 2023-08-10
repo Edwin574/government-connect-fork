@@ -77,8 +77,8 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "BusinessName",
-    headerName: "Business Name",
+    field: "type",
+    headerName: "Business Type",
     width: 150,
     flex: 1,
     align: "center",
@@ -86,7 +86,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "Location",
+    field: "location",
     headerName: "Location",
     width: 100,
     flex: 1,
@@ -95,7 +95,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "DateOfRegistration",
+    field: "date",
     headerName: "Date of registration",
     width: 100,
     flex: 1,
@@ -104,8 +104,8 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "TypeOfBusiness",
-    headerName: "Type of Business",
+    field: "phone",
+    headerName: "Phone Number",
     width: 120,
     flex: 1,
     align: "center",
@@ -113,7 +113,7 @@ const columns = [
     headerClassName: header,
   },
   {
-    field: "PaymentStatus",
+    field: "status",
     headerName: "Payment Status",
     width: 120,
     flex: 1,

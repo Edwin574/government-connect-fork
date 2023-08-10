@@ -10,46 +10,67 @@ import "../styles/components/tables.css";
 import Linechart from "../charts/Linechart";
 import { SpacesData } from "../data/Spaces";
 import { columns } from "../data/Spaces";
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
-import { fetchPublicSpace } from "../redux/reduxSlice/publicSpaceSlice";
+// import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import axios from 'axios'
+// import { fetchPublicSpace } from "../redux/reduxSlice/publicSpaceSlice";
 
 const PublicSpaces = () => {
-  const publicSpaces = useSelector((state) => state.publicSpace.publicSpace);
-  const dispatch = useDispatch();
-
-  /*useEffect(() => {
-    dispatch(fetchPublicSpace());
-  }, [publicSpace]);*/
+  // const publicSpaces = useSelector((state) => state.publicSpace.publicSpace);
+  // const dispatch = useDispatch();
+  const [publicSpace, setPublicSpace] = useState([]);
+  useEffect(() => {
+    axios.get('http://gvmt.oderowrites.com/Api.php/spaces/list')
+    .then((res)=>{
+      console.log(res.data)
+      let data = res.data.users.map((space) => {
+        if (space.location === "1") {
+          space.location = 'Carnivore grounds';
+          space.status = "pending"
+        } else if (space.location === "2") {
+          space.location = 'Rama grounds';
+          space.status = "confirmed"
+        } else if (space.location === "3") {
+          space.location = 'Jakaranda';
+          space.status = "received"
+        }
+        return space;
+      });
+      console.log(data)
+      setPublicSpace(data);
+    })
+    .catch((err)=> console.log("Couldnt load the spaces data", err));
+  }, []);
 
   return (
     <div>
       <div className="mainCards">
         <ShowCards
+          icon={<AddBusinessTwoToneIcon />}
+          name="Spaces requested"
+          numbers={publicSpace.length}
+          bg="normal"
+          percent={24}
+        />
+        <ShowCards
           icon={<LocalHospitalIcon />}
-          name="Emergency Services"
-          numbers="200"
+          name="Spaces booked"
+          numbers="2"
           bg="normal"
           percent={100}
         />
         <ShowCards
           icon={<LocalParkingIcon />}
-          name="Emergency Services"
-          numbers="300"
+          name="Spaces remaining"
+          numbers="30"
           bg="light"
           percent={76}
         />
-        <ShowCards
-          icon={<AddBusinessTwoToneIcon />}
-          name="Emergency Services"
-          numbers="30"
-          bg="normal"
-          percent={24}
-        />
+        
       </div>
 
       <div className="table-containter">
-        <Table cols={columns} data={SpacesData} />
+        <Table cols={columns} data={publicSpace} />
       </div>
 
       <div className="chart">
