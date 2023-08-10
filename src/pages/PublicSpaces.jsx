@@ -20,7 +20,7 @@ const PublicSpaces = () => {
   // const dispatch = useDispatch();
   const [publicSpace, setPublicSpace] = useState([]);
   useEffect(() => {
-    axios.get('http://gvmt.oderowrites.com/Api.php/spaces/list')
+    axios.get('https://gvmt.oderowrites.com/Api.php/spaces/list')
     .then((res)=>{
       console.log(res.data)
       let data = res.data.users.map((space) => {

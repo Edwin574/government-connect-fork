@@ -22,7 +22,7 @@ const Permits = () => {
 
   useEffect(() => {
     axios
-      .get("http://gvmt.oderowrites.com/Api.php/incidence/list")
+      .get("https://gvmt.oderowrites.com/Api.php/incidence/list")
       .then((res) => {
         setPermitData(res.data.users);
       })

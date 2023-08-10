@@ -11,7 +11,7 @@ const fetchIncidence = createAsyncThunk(
   "incidence/fetchIncidence",
   async () => {
     const response = await axios.get(
-      "http://gvmt.oderowrites.com/Api.php/incidence/list"
+      "https://gvmt.oderowrites.com/Api.php/incidence/list"
     );
     console.log(response.data.users);
     return response.data.users;
